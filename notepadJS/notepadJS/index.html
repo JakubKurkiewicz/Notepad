@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="notepad.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Notatnik</title>
+</head>
+<body>
+    <div id="container" style="visibility: hidden;" >
+        <label for="TITLE">Tytuł:</label>  
+        <br>  
+        <input id="TITLE" type="text" maxlength="20" >
+        <br>
+        <label for="CONTENT">Treść notatki:</label>  
+         <br>
+        <textarea maxlength="150" id="CONTENT" ></textarea>
+        <br>
+        <label for="COLOR">Wybierz kolor notatki:</label>  
+      
+        <select id="COLOR">
+            <option value="#FF6D1F">orange</option>
+            <option value="#CCE9FF">blue</option>
+            <option value="#FFC514">yellow</option>
+            <option value="#FFACB2">pink</option>
+        </select>
+        <br>
+        <br>
+        <label for="IMPORTANT">Wybierz tak, jeśli ważne</label> 
+        <select id="IMPORTANT">
+                <option value="false">nie</option>
+                <option value="true">tak</option>
+        </select>
+        <br>
+        <br>
+        <div id="img" title="gym.png"  class="images" onclick="picture(this.id)"></div>
+        <div id="img2" title="work.png" class="images" onclick="picture(this.id)"></div>
+        <div id="img3"  title="mother.png" class="images" onclick="picture(this.id)"></div>
+        <button id="ADD" onclick="klik()" > Stwórz Notatkę </button><br>
+    </div>
+    <button id="bt_add_note" onclick="add_note()">  Dodaj notatkę </button>
+    <button id="bt_remove_note" onclick="remove_note()"> Wyczyść notatki </button>
+</body>
+</html>
